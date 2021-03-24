@@ -6,12 +6,23 @@ namespace Challenges
     {
         static void Main(string[] args)
         {
+            Challenge1User();
+            Challenge2User();
+        }
+
+        private static void Challenge2User()
+        {
+            Console.WriteLine("");
+        }
+
+        private static void Challenge1User()
+        {
             Console.Write("Please enter 3 numbers: ");
             string userInput = Console.ReadLine();
             string[] splitInput = userInput.Split(' ');
             int[] inputNums = new int[splitInput.Length];
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2 && i < splitInput.Length; i++)
             {
                 try
                 {
@@ -27,8 +38,8 @@ namespace Challenges
                 }
             }
             Console.WriteLine($"The product of these 3 numbers is: {Product(inputNums)}");
-
         }
+
         public static int Product(int[] arr)
         {
             int result = 1;
